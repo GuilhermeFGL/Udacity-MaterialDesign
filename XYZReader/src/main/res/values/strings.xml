@@ -8,6 +8,8 @@
     <string name="action_settings">Settings</string>
     <string name="action_share">Share</string>
 
+    <string name="subtitle_formatter">%s by %s</string>
+
     <string name="error_network">Unable to download articles</string>
 
     <string name="up">Up</string>
