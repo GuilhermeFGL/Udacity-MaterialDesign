@@ -18,16 +18,13 @@
         <com.android.volley.toolbox.NetworkImageView
             android:id="@+id/thumbnail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxHeight="200dp"
+            android:layout_height="200dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:background="@color/photo_placeholder"
-            tools:layout_height="200dp" />
+            android:background="@color/photo_placeholder" />
 
         <TextView
             android:id="@+id/article_title"
-            style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
@@ -35,14 +32,15 @@
             android:paddingRight="16dp"
             android:paddingBottom="4dp"
             android:textSize="16sp"
+            android:fontFamily="sans-serif-condensed"
             android:textColor="@color/ltgray"
             android:ellipsize="end"
             android:maxLines="2"
-            tools:text="Mysteries of the Universe Solved"/>
+            tools:text="Mysteries of the Universe Solved"
+            style="?android:attr/textAppearanceListItem" />
 
         <TextView
             android:id="@+id/article_subtitle"
-            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
@@ -52,7 +50,8 @@
             android:textColor="#6000"
             android:maxLines="1"
             android:ellipsize="end"
-            tools:text="20 de jun de 2013 by Carl Sagan" />
+            tools:text="20 de jun de 2013 by Carl Sagan"
+            style="?android:attr/textAppearanceListItemSmall" />
 
     </LinearLayout>
 

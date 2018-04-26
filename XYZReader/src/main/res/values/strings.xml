@@ -9,6 +9,7 @@
     <string name="action_share">Share</string>
 
     <string name="subtitle_formatter">%s by %s</string>
+    <string name="article_details_image_description">article image</string>
 
     <string name="error_network">Unable to download articles</string>
 
