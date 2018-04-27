@@ -46,7 +46,7 @@ public class ArticleListActivity extends AppCompatActivity implements
     private static final String TAG = ArticleListActivity.class.toString();
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
-    private Snackbar errorSnackBar;
+    private Snackbar mSnackBar;
 
     private SimpleDateFormat dateFormat =
             new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.sss", Locale.getDefault());
@@ -60,7 +60,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
 
-        errorSnackBar = Snackbar.make(
+        mSnackBar = Snackbar.make(
                 findViewById(R.id.main_layout),
                 R.string.error_network,
                 Snackbar.LENGTH_INDEFINITE)
@@ -70,7 +70,7 @@ public class ArticleListActivity extends AppCompatActivity implements
                         refresh();
                     }
                 });
-        ((TextView) errorSnackBar.getView().findViewById(android.support.design.R.id.snackbar_text))
+        ((TextView) mSnackBar.getView().findViewById(android.support.design.R.id.snackbar_text))
                 .setTextColor(ContextCompat.getColor(this, android.R.color.white));
 
         mSwipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
@@ -115,7 +115,7 @@ public class ArticleListActivity extends AppCompatActivity implements
                 updateRefreshingUI();
 
                 if (!intent.getBooleanExtra(UpdaterService.EXTRA_SUCCESS, true)) {
-                    errorSnackBar.show();
+                    mSnackBar.show();
                 }
             }
         }
